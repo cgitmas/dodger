@@ -19,9 +19,9 @@ function vibro()
 {
 	vkBridge.send("VKWebAppTapticImpactOccurred", {"style": "heavy"});
 }
-function showLeaderBoard()
+function showLeaderBoard(score)
 {
-	vkBridge.send("VKWebAppShowLeaderBoardBox", {user_result:100})
+	vkBridge.send("VKWebAppShowLeaderBoardBox", {user_result:score, global:1})
          .then(data => console.log(data.success))  
          .catch(error => console.log(error));
 }
