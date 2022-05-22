@@ -1,15 +1,14 @@
 function init()
 {
-	vkBridge.send('VKWebAppInit');
+	vkBridge.send('VKWebAppInit').then(data => console.log(data.result));
 }
 function showAds()
 {
 
-	var f = vkBridge.send("VKWebAppCheckNativeAds", {"ad_format": "interstitial"})
+	var check_ads_status = vkBridge.send("VKWebAppCheckNativeAds", {"ad_format": "interstitial"})
 		  .then(data => console.log(data.result))
     		  .catch(error => console.log(error));
-    	console.log(f)
-    	if (f)
+    	if (check_ads_status)
     	{
     		vkBridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"})
     		  .then(data => console.log(data.result))
