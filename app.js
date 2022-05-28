@@ -27,8 +27,7 @@ function showLeaderBoard(score)
 }
 function addToGlobalLeaderBoard()
 {
-	var token = bridge.send("VKWebAppGetAuthToken", {"app_id": 8169175, "scope": "friends,groups"});
-	vkBridge.send("VKWebAppCallAPIMethod", {"method":"secure.addAppEvent","request_id":"test","params":{"user_id":"138614847", "activity_id":"2", 	 		 "value":"666", "v":"5.131", "access_token":"fca010d3fca010d3fca010d34ffcdcb604ffca0fca010d39e31e8db22d9c0ad08e7457b"}})
+	vkBridge.send("VKWebAppCallAPIMethod", {"method":"secure.addAppEvent","request_id":"test","params":{"user_id":"138614847", "activity_id":"2", 	 		 "value":"666", "v":"5.131", "access_token":"abd395a0abd395a0abed22ccb8abaf3377aabd3abd395a0c941870a513edd870d595ab0"}})
 	 .then(data => console.log(data.result))
 	 .catch(error => console.log(error));
 }
