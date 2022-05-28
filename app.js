@@ -31,12 +31,3 @@ function addToGlobalLeaderBoard()
 	 .then(data => console.log(data.result))
 	 .catch(error => console.log(error));
 }
-
-function getConfig()
-{
-	vkBridge.send("VKWebAppGetConfig");
-	vkBridge.subscribe((e) => {
-		if(e.type == ‘VKWebAppUpdateConfig’) {
-  			console.log(e.data.status)
-		}});
-}
