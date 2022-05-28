@@ -27,7 +27,7 @@ function showLeaderBoard(score)
 }
 function addToGlobalLeaderBoard()
 {
-	vkBridge.send("VKWebAppCallAPIMethod", {"method":"secure.addAppEvent","request_id":"test","params":{"user_id":"138614847", "activity_id":"2", 	 		 "value":"666", "v":"5.131", "access_token":"fca010d3fca010d3fca010d34ffcdcb604ffca0fca010d39e31e8db22d9c0ad08e7457b","client_secret":"zz04gCxpDhjvE5y3nM6T"}})
+	vkBridge.send("VKWebAppCallAPIMethod", {"method":"secure.addAppEvent","request_id":"test","params":{"user_id":"138614847", "activity_id":"2", 	 		 "value":"666", "v":"5.131", "access_token":"fca010d3fca010d3fca010d34ffcdcb604ffca0fca010d39e31e8db22d9c0ad08e7457b","client_secret":"3fd677633fd677633fe8c00feb3faad1b433fd63fd677635d44610d81dfbe3714126c83"}})
 	 .then(data => console.log(data.result))
 	 .catch(error => console.log(error));
 }
