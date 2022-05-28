@@ -27,5 +27,7 @@ function showLeaderBoard(score)
 }
 function addToGlobalLeaderBoard()
 {
-	vkBridge.send("VKWebAppCallAPIMethod", {"method": "secure.addAppEvent", "params": {"user_id": "138614847","activity_id":"2","value":666,"access_token":"bdca1274bdca1274bdca127419bdb6b4a3bbdcabdca1274df5bcc3eb1bdc90b3b9e3096"}}).then(data => console.log(data.result));
+	vkBridge.send("VKWebAppCallAPIMethod", {"method":"secure.addAppEvent","request_id":"test","params":{"user_id":"138614847","activity_id":"2","value":"666","v":"5.131", "access_token":"fca010d3fca010d3fca010d34ffcdcb604ffca0fca010d39e31e8db22d9c0ad08e7457b"}}}).then(data => console.log(data.result));
+	
+	
 }
