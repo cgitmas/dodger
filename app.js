@@ -31,3 +31,15 @@ function addToGlobalLeaderBoard()
 	 .then(data => console.log(data.result))
 	 .catch(error => console.log(error));
 }
+function getMaxScore()
+{
+	return vkBridge.send("VKWebAppStorageGet", {"keys": ["maxScore"]})
+	 .then(data => console.log(data.result))
+	 .catch(error => console.log(error));
+}
+function setMaxScore(score)
+{
+	bridge.send("VKWebAppStorageSet", {key: "maxScore",value: score})
+	 .then(data => console.log(data.result))
+	 .catch(error => console.log(error));
+}
