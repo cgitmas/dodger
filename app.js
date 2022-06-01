@@ -39,7 +39,7 @@ function getMaxScore()
 }
 function setMaxScore(score)
 {
-	bridge.send("VKWebAppStorageSet", {key: "maxScore",value: score})
+	vkBridge.send("VKWebAppStorageSet", {key: "maxScore",value: score})
 	 .then(data => console.log(data.result))
 	 .catch(error => console.log(error));
 }
